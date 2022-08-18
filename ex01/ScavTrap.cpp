@@ -5,22 +5,33 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
+		_hit_p = 100;
+		_energy_p = 50;
+		_damage = 20;
 		std::cout << "ScavTrap Default Constructor called" << std::endl;
 }
+//in eine ILis koennne wirklcih nru die eigenen werte
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
+		// this->_name = name;
+		//kann weg, weil er das vom ct erbt
+		this->_hit_p = 100;
+		this->_energy_p = 50;
+		this->_damage = 20;
 	std::cout << "ScavTrap Constructor called" << std::endl;
 }
 //??TODO: hab die werte in claptrap veraendert
 
-// ScavTrap::ScavTrap( const ScavTrap & src )
-// {
-// 	std::cout << "ScavTrap Copy Constructor called" << std::endl;
-// 	*this = src;
-// }
+ScavTrap::ScavTrap( const ScavTrap & src ): ClapTrap(src)
+{
+
+	std::cout << "ScavTrap Copy Constructor called" << std::endl;
+	// *this = src;
+}
+//initilizer list gibts nur fuer constructoren
 
 
 
@@ -32,31 +43,28 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap Deconstructor called" << std::endl;
 }
+//TODO: warum muss man bei deconstructor nicht : ClapTrap() schreiben?
 
 
 // /*
 // ** --------------------------------- OVERLOAD ---------------------------------
 // */
 
-// ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
-// {
-// 	if ( this != &rhs )
-// 	{
-// 		this->_name = rhs.get_name();
-// 		this->_hit_p = rhs.get_hit_p();
-// 		this->_energy_p = rhs.get_energy_p();
-// 		this->_damage = rhs.get_damage();
-// 	}
-// 	return *this;
-// }
-// TODO::hat denice auch mit rein
+ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
+{
 
-// std::ostream &			operator<<( std::ostream & o, ScavTrap const & i )
-// {
-// 	o << "Hit points = " << i.get_hit_p();
-// 	return o;
-// }
-//TODO::muss man hier alle Classmembers printen??
+	ClapTrap::operator=(rhs);
+
+	return *this;
+}
+\
+
+std::ostream &			operator<<( std::ostream & o, ScavTrap const & i )
+{
+	o << "Hit points = " << i.get_hit_p();
+	return o;
+}
+
 
 
 /*

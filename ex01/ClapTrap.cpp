@@ -4,12 +4,12 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(): _name("default"), _hit_p(10), _energy_p(10), _damage(0)
 {
 	std::cout << "Default Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hit_p(100), _energy_p(50), _damage(20)
+ClapTrap::ClapTrap(std::string name): _name(name), _hit_p(10), _energy_p(10), _damage(0)
 {
 	std::cout << "Constructor called" << std::endl;
 }

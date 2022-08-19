@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rschleic <rschleic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 18:36:15 by rschleic          #+#    #+#             */
-/*   Updated: 2022/08/19 18:36:15 by rschleic         ###   ########.fr       */
+/*   Created: 2022/08/19 18:32:03 by rschleic          #+#    #+#             */
+/*   Updated: 2022/08/19 18:32:03 by rschleic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ FragTrap &				FragTrap::operator=( FragTrap const & rhs )
 	ClapTrap::operator=(rhs);
 	return *this;
 }
+
 
 /*
 ** --------------------------------- METHODS ----------------------------------

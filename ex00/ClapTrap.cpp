@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rschleic <rschleic@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/19 18:05:17 by rschleic          #+#    #+#             */
+/*   Updated: 2022/08/19 18:07:43 by rschleic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ClapTrap::ClapTrap(): _hit_p(10), _energy_p(10), _damage(0)
+ClapTrap::ClapTrap(): _name("default"), _hit_p(10), _energy_p(10), _damage(0)
 {
 	std::cout << " Default Constructor called" << std::endl;
 }
@@ -47,14 +59,7 @@ ClapTrap &				ClapTrap::operator=( ClapTrap const & rhs )
 	}
 	return *this;
 }
-//muss man die immer händisch hinzufügen??
-
-std::ostream &			operator<<( std::ostream & o, ClapTrap const & i )
-{
-	o << "Hit points = " << i.get_hit_p();
-	return o;
-}
-
+//TODO:does assignment op always needs to be specified?
 
 /*
 ** --------------------------------- METHODS ----------------------------------
@@ -155,6 +160,17 @@ int			ClapTrap::get_damage() const
 {
 	return (this->_damage);
 }
+
+std::ostream &			operator<<( std::ostream & o, ClapTrap const & i )
+{
+	o << "ClapTrap " << i.get_name() << ": name = " << i.get_name() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Hit points = " << i.get_hit_p() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Energy points = " << i.get_energy_p() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Attack damage = " << i.get_damage() << "\t";
+
+	return o;
+}
+
 
 
 /* ************************************************************************** */

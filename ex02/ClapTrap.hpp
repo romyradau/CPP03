@@ -21,7 +21,6 @@ class ClapTrap
 		void beRepaired(unsigned int amount);
 
 		void 		set_name(std::string const	name);
-		//maybe reference here ?
 		void 		set_hit_p(unsigned int amount);
 		void 		set_energy_p(unsigned int amount);
 		void 		set_damage(unsigned int amount);

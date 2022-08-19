@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rschleic <rschleic@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/19 18:23:26 by rschleic          #+#    #+#             */
+/*   Updated: 2022/08/19 18:23:26 by rschleic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 /*
@@ -46,14 +58,7 @@ ClapTrap &				ClapTrap::operator=( ClapTrap const & rhs )
 	}
 	return *this;
 }
-//muss man die immer händisch hinzufügen??
-
-std::ostream &			operator<<( std::ostream & o, ClapTrap const & i )
-{
-	o << "Hit points = " << i.get_hit_p();
-	return o;
-}
-
+//TODO:does assignment op always needs to be specified?
 
 /*
 ** --------------------------------- METHODS ----------------------------------
@@ -154,6 +159,17 @@ int			ClapTrap::get_damage() const
 {
 	return (this->_damage);
 }
+
+std::ostream &			operator<<( std::ostream & o, ClapTrap const & i )
+{
+	o << "ClapTrap " << i.get_name() << ": name = " << i.get_name() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Hit points = " << i.get_hit_p() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Energy points = " << i.get_energy_p() << "\t";
+	o << "ClapTrap " << i.get_name() << ": Attack damage = " << i.get_damage() << "\t";
+
+	return o;
+}
+
 
 
 /* ************************************************************************** */

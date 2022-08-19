@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rschleic <rschleic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 18:23:51 by rschleic          #+#    #+#             */
-/*   Updated: 2022/08/19 18:24:04 by rschleic         ###   ########.fr       */
+/*   Created: 2022/08/19 18:27:09 by rschleic          #+#    #+#             */
+/*   Updated: 2022/08/19 18:27:15 by rschleic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 ClapTrap::ClapTrap(): _name("default"), _hit_p(10), _energy_p(10), _damage(0)
 {
-	std::cout << "Default Constructor called" << std::endl;
+	std::cout << "ClapTrap Default Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hit_p(10), _energy_p(10), _damage(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap & src )
@@ -58,7 +58,6 @@ ClapTrap &				ClapTrap::operator=( ClapTrap const & rhs )
 	}
 	return *this;
 }
-//TODO:does assignment op always needs to be specified?
 
 /*
 ** --------------------------------- METHODS ----------------------------------

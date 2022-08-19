@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rschleic <rschleic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 18:23:35 by rschleic          #+#    #+#             */
-/*   Updated: 2022/08/19 18:23:35 by rschleic         ###   ########.fr       */
+/*   Created: 2022/08/19 18:33:29 by rschleic          #+#    #+#             */
+/*   Updated: 2022/08/19 18:33:29 by rschleic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ ScavTrap::ScavTrap(): ClapTrap()
 		_energy_p = 50;
 		_damage = 20;
 }
-/*
-ILs take only own priv member
-I change individually the st values, cause only the variables themselves get copied
-*/
-
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
@@ -53,6 +48,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap Deconstructor called" << std::endl;
 }
 
+
 // /*
 // ** --------------------------------- OVERLOAD ---------------------------------
 // */
@@ -63,6 +59,7 @@ ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 	ClapTrap::operator=(rhs);
 	return *this;
 }
+
 
 /*
 ** --------------------------------- METHODS ----------------------------------

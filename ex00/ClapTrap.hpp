@@ -14,11 +14,11 @@ class ClapTrap
 		ClapTrap(ClapTrap const & src);
 		~ClapTrap();
 
-		ClapTrap &		operator=(ClapTrap const & rhs);
+		ClapTrap &	operator=(ClapTrap const & rhs);
 
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		void 		attack(const std::string& target);
+		void 		takeDamage(unsigned int amount);
+		void 		beRepaired(unsigned int amount);
 
 		void 		set_name(std::string const	name);
 		void 		set_hit_p(unsigned int amount);
